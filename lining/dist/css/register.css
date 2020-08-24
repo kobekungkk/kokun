@@ -181,6 +181,7 @@ a {
         border-right: 1px solid black; }
         .footer .top ul li:nth-child(odd) i {
           display: block;
+          line-height: 30px;
           width: 30px;
           height: 30px;
           border-radius: 50%;
@@ -459,6 +460,7 @@ a {
         border-right: 1px solid black; }
         .footer .top ul li:nth-child(odd) i {
           display: block;
+          line-height: 30px;
           width: 30px;
           height: 30px;
           border-radius: 50%;

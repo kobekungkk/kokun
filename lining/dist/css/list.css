@@ -181,6 +181,7 @@ a {
         border-right: 1px solid black; }
         .footer .top ul li:nth-child(odd) i {
           display: block;
+          line-height: 30px;
           width: 30px;
           height: 30px;
           border-radius: 50%;
@@ -211,59 +212,30 @@ a {
   margin: 0 auto;
   overflow: hidden; }
 
-.sweet {
-  width: 100%;
-  position: relative; }
+* {
+  box-sizing: content-box !important; }
 
-.sweet > a {
-  display: block;
-  width: 165px;
-  height: 49px;
-  position: absolute;
-  top: 96px;
-  right: 290px; }
-
-.sweet img {
-  width: 100%;
-  vertical-align: middle; }
-
-.sweet > ul {
-  position: absolute;
-  top: 95px;
-  left: 512px; }
-
-.sweet > ul > li:first-of-type {
-  background-color: #926761;
-  color: #fff; }
-
-.sweet > ul > li {
-  float: left;
-  width: 141px;
-  height: 38px;
-  color: #926761;
-  background-color: #fff;
-  text-align: center;
-  line-height: 38px;
-  font-size: 23px;
-  margin: 0 50px; }
+.shopcar {
+  margin-top: -5px !important; }
 
 .sweettab {
-  position: absolute;
-  width: 1000px;
+  width: 100%;
   height: 841px;
-  top: 159px;
-  left: 263px; }
+  overflow: hidden;
+  background-image: url(../images/bgc.png); }
 
-.sweetman, .sweetwomen {
+.sweetman {
+  position: relative;
   /* border: 1px solid black; */
   width: 1000px;
-  height: 680px; }
+  height: 680px;
+  margin: 70px auto; }
 
-/* .sweetman>ul, .sweetwomen>ul{
-     position:absolute;
-     width: 1000px;
-     height: 841px;
-   } */
+.sweetman > ul, .sweetwomen > ul {
+  position: absolute;
+  width: 1000px;
+  height: 841px; }
+
 .sweetman > ul > li {
   float: left;
   width: 184px;
@@ -289,3 +261,25 @@ a {
 
 .sweetwoman {
   display: none; }
+
+.panel-footer {
+  background-color: transparent !important;
+  position: absolute;
+  bottom: 0;
+  width: 1000px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between; }
+
+.pagination > li > a {
+  background-color: #fff !important;
+  color: grey !important;
+  margin: 0 10px !important;
+  border: none !important; }
+
+.pagination > li:first-of-type > a {
+  border: 1px solid skyblue; }
+
+.active {
+  border: 1px solid skyblue !important;
+  background-color: blue; }

@@ -13,5 +13,8 @@ require.config({
     }
 })
 require(['list1'],function(list1){
-    list1.downloadData()
+    list1.downloadData(),
+    list1.addPage(),
+    list1.getTotal()
+    
 })
