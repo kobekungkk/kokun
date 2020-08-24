@@ -1,0 +1,72 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "734638",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "1811092",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "9936103",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    },
+    {
+      "icon_id": "11371861",
+      "name": "支付宝",
+      "font_class": "zhifubao",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11445159",
+      "name": "代理",
+      "font_class": "daili",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "13481739",
+      "name": "电 话",
+      "font_class": "dianhua",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "14026956",
+      "name": "购物车",
+      "font_class": "che",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "16202610",
+      "name": "电  话 (1)",
+      "font_class": "dianhua1",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "16204307",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    }
+  ]
+}

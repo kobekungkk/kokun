@@ -1,0 +1,25 @@
+require.config({
+    paths:{
+        jquery:'jquery-1.11.3',
+        'jquery-cookie':'jquery.cookie',
+        parabola:'parabola',
+        shoppingCart1:'shoppingCart1',
+        detail1:'detail1'
+    },
+    shim:{
+        'jquery-cookie':['jquery'],
+        parabola:{
+            exports:'_'
+        }
+    }
+})
+require(['shoppingCart1'],function(shoppingCart1){
+    shoppingCart1.downloadInfo(),
+    shoppingCart1.getTotal(),
+    shoppingCart1.selectAll(),
+    shoppingCart1.removeLi()
+    ,shoppingCart1.addReduce(),
+    shoppingCart1.downloadnav(),
+    shoppingCart1.navHover()
+
+})

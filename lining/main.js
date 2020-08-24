@@ -1,0 +1,26 @@
+require.config({
+    paths:{
+        jquery:'jquery-1.11.3',
+        'jquery-cookie':'jquery.cookie',
+        parabola:'parabola',
+        index:'index',
+        detail1:'detail1'
+    },
+    shim:{
+        'jquery-cookie':['jquery'],
+        parabola:{
+            exports:'_'
+        }
+    }
+})
+require(['index','jquery','jquery-cookie'],function(index){
+    index.lunbo()
+    index.downlodahcy()
+    index.downloadsweet()
+    index.navHover()
+    index.hcyTab()
+    index.sweetTab()
+    index.getTotal()
+    index.downloadnav()
+    
+})

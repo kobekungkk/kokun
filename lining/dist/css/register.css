@@ -1,0 +1,490 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  padding: 15px 0;
+  width: 100%;
+  height: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  /* background-color: black; */ }
+
+a {
+  text-decoration: none; }
+
+.header .logo {
+  width: 90px;
+  height: 20px;
+  margin-left: 10px;
+  float: left;
+  background: url("https://cdns.lining.com/shop/lining/theme/xth2/images/comm/global_009.png") no-repeat 0 -92px; }
+
+.header ul {
+  float: left;
+  margin: -4px; }
+
+.header ul li:first-of-type {
+  margin-left: 15px; }
+
+.header ul li {
+  float: left;
+  margin-left: 10px; }
+
+.header ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px; }
+
+.header .shopcar {
+  float: left;
+  width: 60px;
+  height: 20px;
+  margin-left: 30px;
+  margin-top: -2px;
+  color: black; }
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #000000; }
+  .nav .lining, .nav .box {
+    float: left; }
+  .nav .lining {
+    display: block;
+    width: 54px;
+    height: 20px;
+    margin-top: 18px;
+    margin-left: 15px;
+    background: url("https://cdns.lining.com/shop/lining/theme/xth2/images/comm/global_009.png") no-repeat -166px -41px; }
+  .nav .box > li:first-of-type {
+    margin-left: 50px; }
+  .nav .box > li {
+    position: relative; }
+  .nav .nav {
+    position: relative; }
+  .nav .navbox {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    z-index: 4; }
+  .nav .navul {
+    width: 100%;
+    display: none; }
+  .nav .navul ul {
+    height: 70px;
+    background-color: #d5d5d5; }
+  .nav .navul ul > li:first-of-type {
+    color: red;
+    font-size: 24px; }
+  .nav .navul ul > li {
+    float: left;
+    padding: 20px 40px; }
+  .nav .navul ul > li > a {
+    color: black; }
+  .nav .box {
+    float: left; }
+    .nav .box li {
+      float: left; }
+      .nav .box li a {
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-top: 10px;
+        color: #ecfaff;
+        border-left: 1px solid grey;
+        position: relative; }
+  .nav .search i {
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    top: 15px;
+    right: 100px;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background-color: red;
+    color: #ffffff; }
+  .nav .search input {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none; }
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 50px; }
+  .footer .top {
+    width: 100%;
+    height: 80px;
+    margin-left: 35px;
+    margin-top: 40px; }
+    .footer .top ul {
+      height: 50px;
+      margin-top: 15px; }
+      .footer .top ul li {
+        float: left;
+        margin: 0 5px;
+        height: 20px; }
+      .footer .top ul li:nth-child(odd) {
+        width: 40px;
+        height: 30px;
+        border-right: 1px solid black; }
+        .footer .top ul li:nth-child(odd) i {
+          display: block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid red;
+          font-size: 30px;
+          color: red; }
+  .footer .bottom {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 12px;
+    color: grey; }
+    .footer .bottom ul {
+      margin-left: 80px; }
+      .footer .bottom ul li {
+        float: left;
+        padding: 5px 10px;
+        border-right: 1px solid black; }
+
+.center {
+  width: 731px;
+  background-color: #fff;
+  margin: 50px auto;
+  overflow: hidden; }
+
+.w {
+  width: 1096px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+body {
+  background-color: #eeeeee; }
+
+.center {
+  width: 731px;
+  margin: 50px auto;
+  background-color: #fff;
+  overflow: hidden; }
+  .center .register {
+    width: 600px;
+    height: 600px;
+    margin: 50px auto; }
+    .center .register .rheader {
+      width: 600px;
+      height: 100px;
+      border-bottom: 1px dashed black;
+      position: relative; }
+      .center .register .rheader h2 {
+        font-weight: 800;
+        width: 100px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -50px; }
+    .center .register .body {
+      margin-top: 20px;
+      margin-left: 150px; }
+      .center .register .body p:first-of-type {
+        width: 300px;
+        height: 40px;
+        border: 1px solid red;
+        display: none; }
+      .center .register .body input {
+        padding: 0;
+        width: 300px;
+        height: 40px;
+        margin-top: 10px; }
+      .center .register .body button {
+        border: none;
+        width: 300px;
+        height: 40px;
+        background-color: #ee2737;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px; }
+      .center .register .body span {
+        display: block;
+        font-size: 10px;
+        margin: 10px 0; }
+        .center .register .body span a {
+          color: #ee2737; }
+      .center .register .body p:last-of-type {
+        font-size: 14px;
+        margin: 15px 0; }
+      .center .register .body div {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #cccccc;
+        border-radius: 15px;
+        margin: 10px 5px;
+        text-align: center;
+        font-size: 30px; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  padding: 15px 0;
+  width: 100%;
+  height: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  /* background-color: black; */ }
+
+a {
+  text-decoration: none; }
+
+.header .logo {
+  width: 90px;
+  height: 20px;
+  margin-left: 10px;
+  float: left;
+  background: url("https://cdns.lining.com/shop/lining/theme/xth2/images/comm/global_009.png") no-repeat 0 -92px; }
+
+.header ul {
+  float: left;
+  margin: -4px; }
+
+.header ul li:first-of-type {
+  margin-left: 15px; }
+
+.header ul li {
+  float: left;
+  margin-left: 10px; }
+
+.header ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px; }
+
+.header .shopcar {
+  float: left;
+  width: 60px;
+  height: 20px;
+  margin-left: 30px;
+  margin-top: -2px;
+  color: black; }
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #000000; }
+  .nav .lining, .nav .box {
+    float: left; }
+  .nav .lining {
+    display: block;
+    width: 54px;
+    height: 20px;
+    margin-top: 18px;
+    margin-left: 15px;
+    background: url("https://cdns.lining.com/shop/lining/theme/xth2/images/comm/global_009.png") no-repeat -166px -41px; }
+  .nav .box > li:first-of-type {
+    margin-left: 50px; }
+  .nav .box > li {
+    position: relative; }
+  .nav .nav {
+    position: relative; }
+  .nav .navbox {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    z-index: 4; }
+  .nav .navul {
+    width: 100%;
+    display: none; }
+  .nav .navul ul {
+    height: 70px;
+    background-color: #d5d5d5; }
+  .nav .navul ul > li:first-of-type {
+    color: red;
+    font-size: 24px; }
+  .nav .navul ul > li {
+    float: left;
+    padding: 20px 40px; }
+  .nav .navul ul > li > a {
+    color: black; }
+  .nav .box {
+    float: left; }
+    .nav .box li {
+      float: left; }
+      .nav .box li a {
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-top: 10px;
+        color: #ecfaff;
+        border-left: 1px solid grey;
+        position: relative; }
+  .nav .search i {
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    top: 15px;
+    right: 100px;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background-color: red;
+    color: #ffffff; }
+  .nav .search input {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none; }
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 50px; }
+  .footer .top {
+    width: 100%;
+    height: 80px;
+    margin-left: 35px;
+    margin-top: 40px; }
+    .footer .top ul {
+      height: 50px;
+      margin-top: 15px; }
+      .footer .top ul li {
+        float: left;
+        margin: 0 5px;
+        height: 20px; }
+      .footer .top ul li:nth-child(odd) {
+        width: 40px;
+        height: 30px;
+        border-right: 1px solid black; }
+        .footer .top ul li:nth-child(odd) i {
+          display: block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid red;
+          font-size: 30px;
+          color: red; }
+  .footer .bottom {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 12px;
+    color: grey; }
+    .footer .bottom ul {
+      margin-left: 80px; }
+      .footer .bottom ul li {
+        float: left;
+        padding: 5px 10px;
+        border-right: 1px solid black; }
+
+.center {
+  width: 731px;
+  background-color: #fff;
+  margin: 50px auto;
+  overflow: hidden; }
+
+.w {
+  width: 1096px;
+  margin: 0 auto;
+  overflow: hidden; }

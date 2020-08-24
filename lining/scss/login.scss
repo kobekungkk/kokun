@@ -1,0 +1,81 @@
+@import 'reset';
+@import 'mixin';
+@import 'common';
+body{
+    background-color: #eeeeee;
+}
+.center{
+    width: 731px;
+    background-color: #fff;
+    margin:50px auto;
+    overflow: hidden;
+    .register{
+        width: 600px;
+        height: 500px;
+        margin:50px auto ;
+        .rheader{
+            width: 600px;
+            height: 100px;
+            border-bottom:1px dashed black;
+            position: relative;
+            h2{ 
+                font-weight: 800;
+                width: 100px;
+                position: absolute;
+                bottom: 30px;
+                left:50%;
+                margin-left:-50px;
+            }
+        };
+        .body{
+            margin-top:20px;
+            margin-left:150px;
+           
+            p:first-of-type{
+                width: 300px;
+                height: 40px;
+                border: 1px solid red;
+                display: none;
+            }
+            input{
+                padding: 0;
+                width: 300px;
+                height: 40px;
+                margin-top: 10px;
+            }
+            button{
+                border: none;
+                width: 300px;
+                height: 40px;
+                background-color: #ee2737;
+                color: white;
+                text-align: center;
+                line-height: 40px;
+                margin-top: 10px;
+            }
+            span{
+                display:block;
+                font-size: 10px;
+                margin:10px 0;
+                a{
+                    color:#ee2737;
+                }
+            }
+            p:last-of-type{
+                font-size:14px;
+                margin:15px 0;
+            }
+            div{
+                float: left;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #cccccc;
+                border-radius: 15px;
+                margin:10px 5px;
+                text-align: center;
+                font-size:30px;
+                
+            }
+        }
+    };
+}
