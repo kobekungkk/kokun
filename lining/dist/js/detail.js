@@ -19,6 +19,7 @@ require(['detail1','jquery','jquery-cookie'],function(detail1){
     detail1.addShoppingCar()
     detail1.downloadnav()
     detail1.navHover()
+    detail1.tabDetail()
   
     // detail1.ballMove()
 })

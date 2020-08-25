@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>李宁官方网站</title>
     <link rel="stylesheet" href="css/login.min.css">
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/require.js" defer async="true" data-main="js/login"></script>
+    <style>
+      .body p{
+        text-align: center;
+        line-height: 42px;
+      }
+    </style>
 </head>
 <body>
    
@@ -49,7 +57,7 @@
             <li>
               <a href="">反伍系列
               </a>
-               -->
+               
             </li>
             </ul>
             <div class="search">
@@ -96,9 +104,9 @@
                 <h2>会员登录</h2>
             </div>
             <div class="body">
-                <p></p>
-                <input type="text" placeholder="用户名"><br>
-                <input type="text" placeholder="密码"><br>
+                <p class="msg"></p>
+                <input type="text" placeholder="用户名" name="username"><br>
+                <input type="password" placeholder="密码" name="password"><br>
                 <button>登录</button><br>
                 <span>点击登录，即代表同意<a href="">《李宁官网网站隐私政策及服务协议》</a></span>
                 <p>其他账号登录</p>

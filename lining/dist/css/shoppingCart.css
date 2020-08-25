@@ -117,7 +117,7 @@ a {
     display: none; }
   .nav .navul ul {
     height: 70px;
-    background-color: #d5d5d5; }
+    background-color: #f6f6f6; }
   .nav .navul ul > li:first-of-type {
     color: red;
     font-size: 24px; }
@@ -296,12 +296,14 @@ a {
 .winfo span {
   width: 80px;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  font-size: 12px; }
 
 .wgg span {
   width: 90px;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  font-size: 12px; }
 
 .sc_goodsNum {
   line-height: 30px;

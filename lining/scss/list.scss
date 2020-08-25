@@ -20,8 +20,6 @@
      height: 680px;
      margin: 70px auto;
    }
-   
-   
    .sweetman>ul, .sweetwomen>ul{
      position:absolute;
      width: 1000px;
@@ -69,12 +67,15 @@
     background-color: #fff!important;
     color: grey!important;
     margin:0 10px!important;
-    border: none!important;
-  }
-  .pagination>li:first-of-type>a{
-    border: 1px solid skyblue;
   }
   .active{
     border: 1px solid skyblue!important;
     background-color: blue;
   }
+.navbox ul{
+  margin-bottom:0!important;
+  
+}
+body{
+  line-height: auto!important;
+}

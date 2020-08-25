@@ -2,9 +2,8 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
   getTotal()
     function downloadDetail(){
         var url = location.search;
-        var arr = url.split('?')
+        var arr = url.split('?');
         var id = arr[1];
-        // console.log(id);
         $.ajax({
             url:'../json/detail.json',
             success:function(res){
@@ -28,7 +27,7 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
                                 <p><span>商品编码：</span>
                                   <span class="code">${res[i].code}</span><br></p>
                                 <p><span>吊牌价:</span>
-                                  <span class="preprice">${res[i].price+20}</span><br></p>
+                                  <span class="preprice">&nbsp;&nbsp;${res[i].price+20}</span><br></p>
                               <p>  <span>销售价：</span>
                                 <span class="price">${res[i].price}</span><br></p>
                               </div>
@@ -45,6 +44,44 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
                           </div>
                           </div>
                         </div>
+                        <div class="cbottom">
+                        <div class="description">
+                          <ul>
+                            <li>商品详情</li>
+                            <li>商品评论</li>
+                            <li>购物须知</li>
+                          </ul>
+                          <div class="des cc">
+                            <div class="cleft">
+                            <p><span>商品编码：</span>
+                            <span>${res[i].code}</span><br></p>
+                            <p><span>分类:</span>
+                            <span>${res[i].type}</span><br></p>
+                            <p><span>运动类型:</span>
+                            <span>休闲/潮流/跑步</span><br></p>
+                            </div>
+                            <div class="cright">
+                            <p><span>吊牌价：</span>
+                            <span>${res[i].price+20}</span><br></p>
+                           <p>
+                           <span>详情:</span>
+                           <span>${res[i].intro}</span><br>
+                           </p>
+                            </div>
+                            </div>
+                          
+                          <div class="cmark cc">
+                            暂无购物心得
+                          </div>
+                          <div class="ctitle cc">
+                          本页面所介绍的商品图文信息，实际产品因批次不同，材质和细节上偶有微小差异，敬请谅解，请以收到实物为准；页面中提供的实验数据
+                          为理论值，均来自李宁内部实验室，仅供参考；
+                          另本店严格遵守《中华人民共和国广告法》等相关规定，并已尽最大注意义务及审查义务，竭力避免出现相关禁用词（如“顶级”、“最
+                          佳”等极限化词汇）。如果本店全网包括产品详情页面及产品标题等出现禁用词的，一律非本店主观意愿而为，客户不可将其作为在本店下
+                          单购物的参考依据。特此说明！
+                          </div>
+                      
+                    </div>
                       </div>`
                         }
                     }else if(id == res[i].id){
@@ -63,7 +100,7 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
                             <p><span>商品编码：</span>
                               <span class="code">${res[i].code}</span><br></p>
                             <p><span>吊牌价:</span>
-                              <span class="preprice">${res[i].price+20}</span><br></p>
+                              <span class="preprice">&nbsp;&nbsp;&nbsp;${res[i].price+20}</span><br></p>
                           <p>  <span>销售价：</span>
                             <span class="price">${res[i].price}</span><br></p>
                           </div>
@@ -79,8 +116,48 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
                       </div>
                       </div>
                     </div>
-                  </div>`
-                    }
+                  </div>
+                  <div class="cbottom">
+    <div class="description">
+      <ul>
+        <li>商品详情</li>
+        <li>商品评论</li>
+        <li>购物须知</li>
+      </ul>
+      <div class="des cc">
+        <div class="cleft">
+        <p><span>商品编码：</span>
+        <span>${res[i].code}</span><br></p>
+        <p><span>分类:</span>
+        <span>${res[i].type}</span><br></p>
+        <p><span>运动类型:</span>
+        <span>休闲/潮流/跑步</span><br></p>
+        </div>
+        <div class="cright">
+        <p><span>吊牌价：</span>
+        <span>${res[i].price+20}</span><br></p>
+       <p>
+       <span>详情:</span>
+       <span>${res[i].intro}</span><br>
+       </p>
+        </div>
+        </div>
+      
+      <div class="cmark cc">
+        暂无购物心得
+      </div>
+      <div class="ctitle cc">
+      本页面所介绍的商品图文信息，实际产品因批次不同，材质和细节上偶有微小差异，敬请谅解，请以收到实物为准；页面中提供的实验数据
+      为理论值，均来自李宁内部实验室，仅供参考；
+      另本店严格遵守《中华人民共和国广告法》等相关规定，并已尽最大注意义务及审查义务，竭力避免出现相关禁用词（如“顶级”、“最
+      佳”等极限化词汇）。如果本店全网包括产品详情页面及产品标题等出现禁用词的，一律非本店主观意愿而为，客户不可将其作为在本店下
+      单购物的参考依据。特此说明！
+      </div>
+  
+</div>
+
+  </div>`
+            }
                 }
                 // console.log(str);
                 $('.detail').html(str)
@@ -90,6 +167,25 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
             }
         })
     }
+    function tabDetail(){
+      $('.detail').on('click','.description ul li',function(){
+        var index = $(this).index();
+        console.log(index);
+        $(this).css({
+          backgroundColor:' #ee2737'
+        }).siblings('li').css({
+          backgroundColor:'black'
+        })
+        // console.log( $('.description .cc').eq(index));
+        $('.description .cc').eq(index).css({
+          display:'block'
+        }).siblings('div').css({
+          display:'none'
+        })
+
+      })
+    }
+    
     function scale(){
     
       $(".detail").on('mouseenter','.small',function(){
@@ -114,7 +210,7 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
       })
     })
     }
-    // 商品详情页数量加减操作
+    // 商-r品详情页数量加减操作
     function btnClick(){
       downloadDetail()
       // console.log($('.detail').html());
@@ -282,7 +378,8 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
         addShoppingCar:addShoppingCar,
         getTotal:getTotal,
         downloadnav:downloadnav,
-        navHover:navHover
+        navHover:navHover,
+        tabDetail:tabDetail
         // ballMove:ballMove
     }
 })

@@ -3,8 +3,8 @@
     $username = $_POST['username'];
     $password  = $_POST['password'];
     $repassword  = $_POST['repassword'];
-    $telphone = $_POST['telphone']
-    $createtime  = $_POST['createtime'];
+    $telphone = $_POST['telphone'];
+    $createTime  = $_POST['createTime'];
     $arr = array('num'=>0,'msg'=>'');
     if(!$username){
         $arr['num'] = 1;
@@ -15,6 +15,24 @@
     if(!$password){
         $arr['num'] = 2;
         $arr['msg'] = '密码不能为空！';
+        echo json_encode($arr);
+        exit;
+    }
+    if(!$repassword){
+        $arr['num'] = 9;
+        $arr['msg'] = '确认密码不能为空！';
+        echo json_encode($arr);
+        exit;
+    }
+    if(!$telphone){
+        $arr['num'] = 7;
+        $arr['msg'] = '手机号不能为空!';
+        echo json_encode($arr);
+        exit;
+    }
+    if(strlen($telphone)!=11){
+        $arr['num'] = 8;
+        $arr['msg'] = '手机号码长度应为11位！';
         echo json_encode($arr);
         exit;
     }
@@ -51,7 +69,7 @@
     }
     $id =2;
     $str = md5(md5($password).'gkk');
-    $sql1 = "insert into users(username,password,createtime,telphone)values('{$username}','{$str}',{$createtime},{$telphone})";
+    $sql1 = "insert into users(username,password,createTime,telphone)values('{$username}','{$str}',{$createTime},{$telphone})";
     $res1 = mysql_query($sql1);
     if($res1){
         $arr['msg']= '注册成功！';

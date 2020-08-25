@@ -117,7 +117,7 @@ a {
     display: none; }
   .nav .navul ul {
     height: 70px;
-    background-color: #d5d5d5; }
+    background-color: #f6f6f6; }
   .nav .navul ul > li:first-of-type {
     color: red;
     font-size: 24px; }
@@ -222,7 +222,7 @@ a {
   overflow: hidden;
   padding-top: 20px;
   margin-top: 40px;
-  margin-left: 110px;
+  margin-left: 20px;
   margin-bottom: 100px; }
 
 .w {
@@ -235,7 +235,8 @@ a {
   width: 300px;
   height: 300px;
   border-right: 1px solid #cccccc;
-  position: relative; }
+  position: relative;
+  margin-left: 30px; }
 
 .small img, .big img {
   width: 100%; }
@@ -333,3 +334,62 @@ a {
   left: 0px;
   top: 0px;
   display: none; }
+
+.cbottom {
+  width: 100%;
+  margin-top: 250px; }
+
+.description {
+  width: 100%;
+  height: 180px;
+  margin-top: 340px;
+  /* border: 1px solid grey; */ }
+
+.description > ul > li {
+  float: left;
+  width: 33.3%;
+  height: 50px;
+  /* background-color: #ee2737; */
+  background-color: #313131;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer; }
+
+.description > ul > li:first-of-type {
+  background-color: #ee2737; }
+
+.footer {
+  margin-top: -34px; }
+
+.cmark, .ctitle {
+  display: none; }
+
+.des {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f5f5f5; }
+
+.cleft, .cright {
+  width: 50%;
+  float: left; }
+
+.cleft p, .cright p {
+  float: left;
+  margin: 10px;
+  margin-top: 20px;
+  padding-left: 50px; }
+
+.cmark {
+  width: 100%;
+  text-align: center;
+  height: 180px;
+  line-height: 130px;
+  background-color: #f5f5f5; }
+
+.ctitle {
+  width: 100%;
+  height: 180px;
+  line-height: 32px;
+  font-size: 14px; }

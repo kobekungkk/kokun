@@ -117,7 +117,7 @@ a {
     display: none; }
   .nav .navul ul {
     height: 70px;
-    background-color: #d5d5d5; }
+    background-color: #f6f6f6; }
   .nav .navul ul > li:first-of-type {
     color: red;
     font-size: 24px; }
@@ -274,12 +274,14 @@ a {
 .pagination > li > a {
   background-color: #fff !important;
   color: grey !important;
-  margin: 0 10px !important;
-  border: none !important; }
-
-.pagination > li:first-of-type > a {
-  border: 1px solid skyblue; }
+  margin: 0 10px !important; }
 
 .active {
   border: 1px solid skyblue !important;
   background-color: blue; }
+
+.navbox ul {
+  margin-bottom: 0 !important; }
+
+body {
+  line-height: auto !important; }

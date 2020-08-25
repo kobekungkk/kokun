@@ -14,13 +14,13 @@ define(['jquery','jquery-cookie'],function($){
                 var pages = Math.ceil(totalNum/limit)
                 var str1 = ``;
                 for(var i = 0;i<pages;i++){
-                    str1 += ` <li><a href="#" class="aaa">${i+1}</a></li>`
+                    str1 += ` <li><a href="#" class="aaa ${i==0?'active':''}">${i+1}</a></li>`
                 }
                 $('.pagination').html(str1)
                 var str2 = ``;
                 for(var i = 0;i<10;i++){
                     str2 += ` <li>
-                    <a href = "detail.html?${arr[i].id}" ><img src="${arr[i].url[0].one?arr[i].url[0].one:arr[i].url}"alt=""></a><br/>
+                    <a href = "detail.html?${arr[i].id}" target="_blank" ><img src="${arr[i].url[0].one?arr[i].url[0].one:arr[i].url}"alt=""></a><br/>
                     <div class="bottom">
                       <span>${arr[i].intro}</span><br/><br/>
                       <span>￥${arr[i].price}</span>
@@ -41,7 +41,7 @@ define(['jquery','jquery-cookie'],function($){
     function addPage(){
         // downloadData()
         $('.pagination').on('click','.aaa',function(){
-            $(this).addClass('active').closest('li').siblings().children('a').removeClass('ative')
+            $(this).addClass('active').closest('li').siblings().children('a').removeClass('active')
             // console.log(1);
             // console.log(pages);
             page = $(this).html()
@@ -59,6 +59,11 @@ define(['jquery','jquery-cookie'],function($){
                     console.log(arr);
                     var totalNum = arr.length;
                     pages = Math.ceil(totalNum / limit)
+                    $('.aaa').each(function(index,ele){
+                        if(index == page-1){
+                            $(ele).addClass('active').closest('li').siblings().children('a').removeClass('active')
+                        }
+                    })
                     if(page == pages){
                         border = totalNum - (page-1)*limit + (page-1)*limit;
                     }else{
@@ -77,13 +82,24 @@ define(['jquery','jquery-cookie'],function($){
                     var str2 = ``;
                     console.log(start,border);
                     for(var i = start;i<border;i++){
-                        str2 += ` <li>
-                        <a href = "detail.html?${arr[i].id}" ><img src="${arr[i].url[0].one?arr[i].url[0].one:arr[i].url}"alt=""></a><br/>
-                        <div class="bottom">
-                          <span>${arr[i].intro}</span><br/><br/>
-                          <span>￥${arr[i].price}</span>
-                        </div>
-                      </li>`
+                        if(start<20){
+                            str2 += ` <li>
+                            <a href = "detail.html?${arr[i].id}" target="_blank"><img src="${arr[i].url[0].one?arr[i].url[0].one:arr[i].url}"alt=""></a><br/>
+                            <div class="bottom">
+                              <span>${arr[i].intro}</span><br/><br/>
+                              <span>￥${arr[i].price}</span>
+                            </div>
+                          </li>`
+                        }else{
+                            str2 += ` <li>
+                            <a href = "detail.html?${arr[i].code}" target="_blank"><img src="${arr[i].url[0].one?arr[i].url[0].one:arr[i].url}"alt=""></a><br/>
+                            <div class="bottom">
+                              <span>${arr[i].intro}</span><br/><br/>
+                              <span>￥${arr[i].price}</span>
+                            </div>
+                          </li>`
+                        }
+                     
                     }
                     $('.sweetman>ul').html(str2)
                 },
@@ -117,10 +133,70 @@ define(['jquery','jquery-cookie'],function($){
           $('.shopcar .num').html((0))
         }
       }
+      function downloadnav(){
+        $.ajax({
+            url:'../json/nav.json',
+            success:function(res){
+                var str = ``;
+                for(var i = 0;i<res.length;i++){
+                        str += ` 
+                        <div class="navul" id="${i}">
+                        <ul>
+                        <li>${res[i].title[0]}</li>
+                        <li><a href="">${res[i].content[0]}</a></li>
+                        <li><a href="">${res[i].content[1]}</a></li>
+                        <li><a href="">${res[i].content[2]}</a></li>
+                        <li><a href="">${res[i].content[3]}</a></li>
+                        <li><a href="">${res[i].content[4]}</a></li>
+                        <li><a href="">${res[i].content[5]}</a></li>
+                        <li><a href="">${res[i].content[6]}</a></li>
+                      </ul>
+                      <ul>
+                      <li>${res[i].title[1]}</li>
+                      <li><a href="">${res[i].content[7]}</a></li>
+                      <li><a href="">${res[i].content[8]}</a></li>
+                      <li><a href="">${res[i].content[9]}</a></li>
+                      <li><a href="">${res[i].content[10]}</a></li>
+                      <li><a href="">${res[i].content[11]}</a></li>
+                      <li><a href="">${res[i].content[12]}</a></li>
+                      <li><a href="">${res[i].content[13]}</a></li>
+                      <li><a href="">${res[i].content[14]}</a></li>
+                      <li><a href="">${res[i].content[15]}</a></li>
+                      <li><a href="">${res[i].content[16]}</a></li>
+                      </ul>
+                      </div>`
+                    }
+                    $('.navbox').html(str)
+
+            },
+            error:function(err){
+                console.log(err);
+            }
+        })
+    }
+    function navHover(){
+        $('.nav .box li a').each(function(index,ele){
+            $(ele).hover(function(){
+                $('.navul').eq(index).show().siblings().hide()
+                $(ele).css({
+                    backgroundColor:'#d5d5d5'
+                }).siblings().css({
+                    backgroundColor:'balck'
+                })
+            },function(){
+                $(ele).css({
+                    backgroundColor:'black'
+                })
+                $('.navul').hide()
+            })
+        })
+    }
     return{
         downloadData:downloadData,
         addPage:addPage,
-        getTotal:getTotal
+        getTotal:getTotal,
+        downloadnav:downloadnav,
+        navHover:navHover
     
     }
 })

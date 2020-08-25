@@ -233,7 +233,7 @@ define(['jquery','jquery-cookie'],function($){
                 for(var i = 0;i<arr.length;i++){
                     if(arr[i].type == 'man'){
                         str1 += ` <li>
-                        <a href = "detail.html?${arr[i].id}" id=${arr[i].id}><img src="${arr[i].url}"alt=""></a><br/>
+                        <a href = "detail.html?${arr[i].id}" target="_blank" id=${arr[i].id}><img src="${arr[i].url}"alt=""></a><br/>
                         <div class="bottom">
                           <span>${arr[i].intro}</span><br/><br/>
                           <span>￥${arr[i].price}</span>
