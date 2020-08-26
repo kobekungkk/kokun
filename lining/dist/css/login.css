@@ -94,6 +94,8 @@ a {
   background-color: #000000; }
   .nav .lining, .nav .box {
     float: left; }
+  .nav .box {
+    height: 50px; }
   .nav .lining {
     display: block;
     width: 54px;
@@ -104,20 +106,10 @@ a {
   .nav .box > li:first-of-type {
     margin-left: 50px; }
   .nav .box > li {
-    position: relative; }
+    position: relative;
+    height: 100%; }
   .nav .nav {
     position: relative; }
-  .nav .navbox {
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    z-index: 4; }
-  .nav .navul {
-    width: 100%;
-    display: none; }
-  .nav .navul ul {
-    height: 70px;
-    background-color: #f6f6f6; }
   .nav .navul ul > li:first-of-type {
     color: red;
     font-size: 24px; }
@@ -128,17 +120,59 @@ a {
     color: black; }
   .nav .box {
     float: left; }
-    .nav .box li {
-      float: left; }
-      .nav .box li a {
-        padding: 0 40px;
-        display: flex;
-        align-items: center;
-        height: 30px;
-        margin-top: 10px;
-        color: #ecfaff;
-        border-left: 1px solid grey;
-        position: relative; }
+  .nav .box > li {
+    float: left; }
+  .nav .navul {
+    background-color: #f6f6f6; }
+  .nav .box > li {
+    position: relative;
+    float: left; }
+  .nav .box li .navbox {
+    width: 1519.2px;
+    height: 128px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 0; }
+  .nav .box li > .navul {
+    width: 1519.2px;
+    height: 80px; }
+  .nav .navul > ul {
+    height: 64px;
+    width: 100%; }
+  .nav .box li > .navul > ul > li {
+    float: left; }
+  .nav .box li > .navul > ul > li > a {
+    float: left; }
+  .nav .box > li {
+    width: 140px; }
+  .nav .navbox {
+    display: none; }
+  .nav .box > li > a {
+    /* float: left; */
+    width: 140px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    /* display:flex; */
+    /* align-items: center; */
+    height: 30px;
+    margin-top: 10px;
+    color: #ecfaff;
+    border-left: 1px solid grey;
+    /* position: relative; */ }
+  .nav .box > li:first-of-type > .navbox {
+    left: -120px; }
+  .nav .box > li:nth-of-type(2) > .navbox {
+    left: -260px; }
+  .nav .box > li:nth-of-type(3) > .navbox {
+    left: -400px; }
+  .nav .box > li:nth-of-type(4) > .navbox {
+    left: -540px; }
+  .nav .box > li:nth-of-type(5) > .navbox {
+    left: -680px; }
+  .nav .box > li:nth-of-type(6) > .navbox {
+    left: -820px; }
   .nav .search i {
     position: absolute;
     text-align: center;

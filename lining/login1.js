@@ -37,8 +37,8 @@ define(['jquery'],function($){
             success:function(res){
                 var str = ``;
                 for(var i = 0;i<res.length;i++){
-                        str += ` 
-                        <div class="navul" id="${i}">
+                        str = ` 
+                        <div class="navul">
                         <ul>
                         <li>${res[i].title[0]}</li>
                         <li><a href="">${res[i].content[0]}</a></li>
@@ -63,8 +63,9 @@ define(['jquery'],function($){
                       <li><a href="">${res[i].content[16]}</a></li>
                       </ul>
                       </div>`
+                      $('.navbox').eq(i).html(str)
                     }
-                    $('.navbox').html(str)
+                    
 
             },
             error:function(err){
@@ -73,21 +74,39 @@ define(['jquery'],function($){
         })
     }
     function navHover(){
-        $('.nav .box li a').each(function(index,ele){
+        $('.nav .box li').each(function(index,ele){
             $(ele).hover(function(){
-                $('.navul').eq(index).show().siblings().hide()
+                $('.navbox').hide()
+                $(this).children('.navbox').show()
                 $(ele).css({
                     backgroundColor:'#d5d5d5'
                 }).siblings().css({
                     backgroundColor:'balck'
                 })
-            },function(){
+            }
+            ,
+            function(){
                 $(ele).css({
                     backgroundColor:'black'
                 })
-                $('.navul').hide()
+                $(this).children('.navbox').hide()
+            }
+            )
+           
+      
+        })
+        $('.nav').on('mouseenter','.navbox .navul ul li a',function(){
+            $(this).css({
+                color:'red'
             })
         })
+        $('.nav').on('mouseleave','.navbox .navul ul li a',function(){
+            $(this).css({
+                color:'black'
+            })
+        })
+
+
     }
     return {
         loginTest:loginTest,

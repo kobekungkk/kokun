@@ -50,8 +50,7 @@ define(['jquery','jquery-cookie'],function($){
         })
         function getPage(){
             var border ;
-            var start = (page-1)*limit;
-            console.log(page);
+            var start ;
             $.ajax({
                 url:'../json/detail.json',
                 success:function(res){
@@ -59,28 +58,43 @@ define(['jquery','jquery-cookie'],function($){
                     console.log(arr);
                     var totalNum = arr.length;
                     pages = Math.ceil(totalNum / limit)
-                    $('.aaa').each(function(index,ele){
-                        if(index == page-1){
-                            $(ele).addClass('active').closest('li').siblings().children('a').removeClass('active')
-                        }
-                    })
+                    if(page <1){
+                        page++;
+                        
+                    }else{
+                        
+                    }
+                    if(page > pages){
+                        page--;
+                       
+                    }else{
+                       
+                    }
+                    if(page==1){
+                        $('.previous ').addClass('disabled')
+                    }else{
+                        $('.previous ').removeClass('disabled')
+                    }
+                    if(page==pages){
+                        $('.next').addClass('disabled')
+                    }else{
+                        $('.next').removeClass('disabled')
+                    }
+                 
+                    var str2 = ``;
+                    start = (page-1)*limit;
                     if(page == pages){
                         border = totalNum - (page-1)*limit + (page-1)*limit;
                     }else{
                         border = page*10;
                     }
-                    if(page <= 1){
-                        $('.previous ').addClass('disabled')
-                    }else{
-                        $('.previous ').removeClass('disabled')
-                    }
-                    if(page >= pages){
-                        $('.next').addClass('disabled')
-                    }else{
-                        $('.next').removeClass('disabled')
-                    }
-                    var str2 = ``;
+                    console.log(page);
                     console.log(start,border);
+                    $('.aaa').each(function(index,ele){
+                        if(index == page-1){
+                            $(ele).addClass('active').closest('li').siblings().children('a').removeClass('active')
+                        }
+                    })
                     for(var i = start;i<border;i++){
                         if(start<20){
                             str2 += ` <li>
@@ -139,8 +153,8 @@ define(['jquery','jquery-cookie'],function($){
             success:function(res){
                 var str = ``;
                 for(var i = 0;i<res.length;i++){
-                        str += ` 
-                        <div class="navul" id="${i}">
+                        str = ` 
+                        <div class="navul">
                         <ul>
                         <li>${res[i].title[0]}</li>
                         <li><a href="">${res[i].content[0]}</a></li>
@@ -165,8 +179,9 @@ define(['jquery','jquery-cookie'],function($){
                       <li><a href="">${res[i].content[16]}</a></li>
                       </ul>
                       </div>`
+                      $('.navbox').eq(i).html(str)
                     }
-                    $('.navbox').html(str)
+                    
 
             },
             error:function(err){
@@ -175,21 +190,39 @@ define(['jquery','jquery-cookie'],function($){
         })
     }
     function navHover(){
-        $('.nav .box li a').each(function(index,ele){
+        $('.nav .box li').each(function(index,ele){
             $(ele).hover(function(){
-                $('.navul').eq(index).show().siblings().hide()
+                $('.navbox').hide()
+                $(this).children('.navbox').show()
                 $(ele).css({
                     backgroundColor:'#d5d5d5'
                 }).siblings().css({
                     backgroundColor:'balck'
                 })
-            },function(){
+            }
+            ,
+            function(){
                 $(ele).css({
                     backgroundColor:'black'
                 })
-                $('.navul').hide()
+                $(this).children('.navbox').hide()
+            }
+            )
+           
+      
+        })
+        $('.nav').on('mouseenter','.navbox .navul ul li a',function(){
+            $(this).css({
+                color:'red'
             })
         })
+        $('.nav').on('mouseleave','.navbox .navul ul li a',function(){
+            $(this).css({
+                color:'black'
+            })
+        })
+
+
     }
     return{
         downloadData:downloadData,

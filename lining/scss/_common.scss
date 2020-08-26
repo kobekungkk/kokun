@@ -53,6 +53,9 @@ a{
     .lining, .box{
         float: left;
     }
+    .box{
+      height: 50px;
+    }
     .lining{
         display: block;
         width: 54px;
@@ -66,26 +69,12 @@ a{
     }
     .box>li{
         position: relative;
+        height: 100%;
       }
       .nav{
         position: relative;
       }
-      .navbox{
-        position: absolute;
-        top:40px;
-        width: 100%;
-        z-index: 4;
-      
-      }
-      .navul{
-        width: 100%;
-        display: none;
-      }
-      .navul ul{
-        height: 70px;
-        background-color: #f6f6f6;
-        // opacity: .8;
-      }
+
       .navul ul>li:first-of-type{
         color:red ;
         font-size: 24px;
@@ -93,28 +82,83 @@ a{
      .navul ul>li{
         float: left;
         padding:20px 40px;
-       
      }
      .navul ul>li>a{
        color: black;
      }
     .box{
         float: left;
-        
-        li{
-            float: left;
-           
-            a{
-                padding:0 40px;
-                display:flex;
-                align-items: center;
-                height: 30px;
-                margin-top: 10px;
-                color:#ecfaff;
-                border-left: 1px solid grey;
-                position: relative;
-            }
-        }
+    }
+    .box>li{
+        float: left;
+    }
+    .navul{
+        background-color: #f6f6f6;
+      }
+      .box>li{
+        position: relative;
+        float: left;
+      }
+      .box li .navbox{
+        width: 1519.2px;
+        height: 128px;
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        left: 0;
+      }
+      .box li>.navul{
+        width: 1519.2px;
+        height: 80px;
+       
+      }
+      .navul>ul{
+        height: 64px;
+        width: 100%;
+      }
+      .box li>.navul>ul>li{
+        float: left;
+      }
+      .box li>.navul>ul>li>a{
+        float: left;
+      }
+      .box>li{
+        width: 140px;
+      }
+     .navbox{
+       display: none;
+     }
+      .box>li>a{
+        /* float: left; */
+        width: 140px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        /* display:flex; */
+        /* align-items: center; */
+        height: 30px;
+        margin-top: 10px;
+        color:#ecfaff;
+        border-left: 1px solid grey;
+        /* position: relative; */
+    }
+    .box>li:first-of-type>.navbox{
+      left: -120px;
+    }
+    .box>li:nth-of-type(2)>.navbox{
+      left: -260px;
+    }
+    .box>li:nth-of-type(3)>.navbox{
+      left: -400px;
+    }
+    .box>li:nth-of-type(4)>.navbox{
+      left: -540px;
+    }
+    .box>li:nth-of-type(5)>.navbox{
+      left: -680px;
+    }
+    .box>li:nth-of-type(6)>.navbox{
+      left: -820px;
     }
     .search{
        

@@ -22,5 +22,6 @@ require(['index','jquery','jquery-cookie'],function(index){
     index.sweetTab()
     index.getTotal()
     index.downloadnav()
+    index.clickPic()
     
 })

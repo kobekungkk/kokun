@@ -317,8 +317,8 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
           success:function(res){
               var str = ``;
               for(var i = 0;i<res.length;i++){
-                      str += ` 
-                      <div class="navul" id="${i}">
+                      str = ` 
+                      <div class="navul">
                       <ul>
                       <li>${res[i].title[0]}</li>
                       <li><a href="">${res[i].content[0]}</a></li>
@@ -343,8 +343,9 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
                     <li><a href="">${res[i].content[16]}</a></li>
                     </ul>
                     </div>`
+                    $('.navbox').eq(i).html(str)
                   }
-                  $('.navbox').html(str)
+                  
 
           },
           error:function(err){
@@ -353,22 +354,40 @@ define(['jquery','jquery-cookie','parabola'],function($,parabola){
       })
   }
   function navHover(){
-      $('.nav .box li a').each(function(index,ele){
-          $(ele).hover(function(){
-              $('.navul').eq(index).show().siblings().hide()
-              $(ele).css({
-                  backgroundColor:'#d5d5d5'
-              }).siblings().css({
-                  backgroundColor:'balck'
-              })
-          },function(){
-              $(ele).css({
-                  backgroundColor:'black'
-              })
-              $('.navul').hide()
-          })
-      })
-  }
+    $('.nav .box li').each(function(index,ele){
+        $(ele).hover(function(){
+            $('.navbox').hide()
+            $(this).children('.navbox').show()
+            $(ele).css({
+                backgroundColor:'#d5d5d5'
+            }).siblings().css({
+                backgroundColor:'balck'
+            })
+        }
+        ,
+        function(){
+            $(ele).css({
+                backgroundColor:'black'
+            })
+            $(this).children('.navbox').hide()
+        }
+        )
+       
+  
+    })
+    $('.nav').on('mouseenter','.navbox .navul ul li a',function(){
+        $(this).css({
+            color:'red'
+        })
+    })
+    $('.nav').on('mouseleave','.navbox .navul ul li a',function(){
+        $(this).css({
+            color:'black'
+        })
+    })
+
+
+}
 
     
     return{
