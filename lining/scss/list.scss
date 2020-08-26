@@ -5,7 +5,10 @@
   box-sizing: content-box!important;
 }
 .shopcar{
-  margin-top: -5px!important;
+  margin-top: -1px!important;
+}
+.header ul{
+  margin: -1px;
 }
    .sweettab{
     width: 100%;
@@ -53,6 +56,24 @@
    .sweetwoman{
        display: none;
    }
+   .sweettab .bottom{
+    width: 100%;
+    height: 70px;
+    position: relative;
+  }
+  .sweettab .bottom span:first-of-type{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sweettab .bottom span:nth-of-type(2){
+   // display: flex;
+   // justify-content: center;
+   position: absolute;
+   bottom:10px;
+   left: 70px;
+   // margin-top: 10px;
+ }
    .panel-footer{
      background-color: transparent!important;
     position: absolute;

@@ -264,7 +264,7 @@ define(['jquery','jquery-cookie'],function($){
                     
                         <a href = "detail.html?${arr[i].id}"><img src="${arr[i].url}"alt=""></a><br/>
                         <div class="bottom">
-                          <span>${arr[i].intro}</span><br/><br/>
+                          <span>${arr[i].intro}</span><br/>
                           <span>￥${arr[i].price}</span>
                         </div>
                       </li>`
