@@ -23,5 +23,6 @@ require(['index','jquery','jquery-cookie'],function(index){
     index.getTotal()
     index.downloadnav()
     index.clickPic()
+    index.asideMove()
     
 })

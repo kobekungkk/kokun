@@ -77,6 +77,40 @@ img { border: none; }
   .l1, .l2, .l3{
     display: none;
   }
+  .aside{
+    display: none;
+    width: 126px;
+    height: 300px;
+    position: fixed;
+    left: 75px;
+    top: 80px;
+    z-index: 3;
+  }
+  .aside ul li{
+    height: 50px;
+    line-height: 50px;
+    text-align:center;
+    border-bottom:1px dashed #7e5636;
+    background-color: #dbc6a8;
+  }
+  .aside ul li a {
+    float: left;
+    width: 100%;
+    height: 50px;
+    font-family: '微软雅黑';
+    color: #7e5636;
+  }
+  .aside ul li:first-of-type{
+    width: 126px;
+    height: 139px;
+  }
+  .aside ul li:first-of-type img{
+    width: 100%;
+    height: 100%;
+  }
+  #basketball{
+    border: none!important;
+  }
   .sweet{
     width: 100%;
     position: relative;

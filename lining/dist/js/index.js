@@ -351,6 +351,20 @@ function getTotal(){
       $('.shopcar .num').html((0))
     }
   }
+  function asideMove(){
+      $(window).scroll(function(){
+          console.log($(this).scrollTop());
+          if($(this).scrollTop()>=800 && $(this).scrollTop()<=4300){
+              $('.aside').css({
+                  display:'block'
+              })
+          }else{
+              $('.aside').css({
+                  display:'none'
+              })
+          }
+      })
+  }
     return {
         lunbo:lunbo,
         downlodahcy:downlodahcy,
@@ -360,6 +374,7 @@ function getTotal(){
         sweetTab:sweetTab,
         getTotal:getTotal,
         downloadnav:downloadnav,
-        clickPic:clickPic
+        clickPic:clickPic,
+        asideMove:asideMove
     }
 })
